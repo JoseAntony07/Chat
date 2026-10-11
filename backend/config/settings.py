@@ -2,8 +2,11 @@ import os
 from pathlib import Path
 
 import dj_database_url
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / ".env")
+
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-only-change-this-before-deploying")
 DEBUG = os.getenv("DEBUG", "True").lower() in ("1", "true", "yes")
 ALLOWED_HOSTS = [host.strip() for host in os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").split(",") if host.strip()]
@@ -36,7 +39,17 @@ USE_TZ = True
 STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173").split(",") if origin.strip()]
-WEBSOCKET_ALLOWED_ORIGINS = CORS_ALLOWED_ORIGINS + ["https://.ngrok.app", "https://.ngrok-free.app"]
+WEBSOCKET_ALLOWED_ORIGINS = CORS_ALLOWED_ORIGINS + [
+    "https://.ngrok.app",
+    "https://.ngrok-free.app",
+    "http://127.0.0.1:8000",
+    "http://10.0.2.2:8000",
+]
+WEBSOCKET_ALLOWED_ORIGINS.extend(
+    origin.strip()
+    for origin in os.getenv("WEBSOCKET_EXTRA_ALLOWED_ORIGINS", "").split(",")
+    if origin.strip()
+)
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
     "DEFAULT_AUTHENTICATION_CLASSES": ["rest_framework_simplejwt.authentication.JWTAuthentication"],
