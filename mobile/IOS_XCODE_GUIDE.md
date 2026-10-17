@@ -4,6 +4,8 @@ This guide covers local iOS setup for Convo Mobile, including the Expo CLI and X
 
 For Android Studio and Android Emulator setup, see [ANDROID_STUDIO_GUIDE.md](ANDROID_STUDIO_GUIDE.md).
 
+For installing on a real iPhone or Android phone, see [PHYSICAL_DEVICE_README.md](PHYSICAL_DEVICE_README.md).
+
 ## 1. Requirements
 
 - A Mac with Xcode installed. Open Xcode once and accept its license and setup prompts.

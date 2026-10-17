@@ -3,6 +3,7 @@
 This guide explains how to set up and run Convo Mobile on Android using either Expo CLI or Android Studio. Both workflows build the same React Native app and connect to the same Django backend. This project uses Expo SDK 57 and a native development build; do not use Expo Go for these steps.
 
 For iOS, see [IOS_XCODE_GUIDE.md](IOS_XCODE_GUIDE.md). For the overall mobile setup, see [README.md](README.md).
+For installing on a real phone, see [PHYSICAL_DEVICE_README.md](PHYSICAL_DEVICE_README.md).
 
 ## 1. Install Android development tools on macOS
 
