@@ -2,6 +2,8 @@
 
 This guide covers local iOS setup for Convo Mobile, including the Expo CLI and Xcode workflows. The app is an Expo/React Native development build; it is not launched through Expo Go. Both workflows use the same generated iOS project, the same simulator, and the same Django backend.
 
+For Android Studio and Android Emulator setup, see [ANDROID_STUDIO_GUIDE.md](ANDROID_STUDIO_GUIDE.md).
+
 ## 1. Requirements
 
 - A Mac with Xcode installed. Open Xcode once and accept its license and setup prompts.

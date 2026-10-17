@@ -89,6 +89,8 @@ npx expo run:ios --device
 
 ## Android
 
+For Android Studio installation, emulator creation, backend networking, and both Android run workflows, see the [Android Emulator and Android Studio Guide](ANDROID_STUDIO_GUIDE.md).
+
 Android requires Android Studio with an Android SDK and an available emulator, or a connected Android device. The Android emulator reaches the Mac's backend using `10.0.2.2`, not `127.0.0.1`. Set `mobile/.env` accordingly:
 
 ```env
