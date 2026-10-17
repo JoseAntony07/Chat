@@ -233,3 +233,9 @@ In xcode open `ios/Convo.xcworkspace` and build and run
 npx expo run:ios --device "iPhone 18 Pro"
 
 Keep the Expo terminal running for JavaScript updates and the Django backend running for login and messages. If the Simulator window doesn’t appear, open Simulator from Xcode’s Xcode → Open Developer Tool → Simulator menu (Device Hub); the app should already be installed.
+
+
+
+Android:
+--------
+**Xcode builds and runs iOS apps only.** For Android, use **Android Studio** or the Expo command `npx expo run:android`. Both use the same React Native code; they build it with Android’s tools.
